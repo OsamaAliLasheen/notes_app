@@ -45,6 +45,7 @@ class CustomNoteContainer extends StatelessWidget {
                 width: 20,
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(

@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
                 child: FloatingActionButton(
                     backgroundColor: Colors.greenAccent,
                     onPressed: () {
-                      Navigator.pushNamed(context, CreateNewNotePage.id);
+                      Navigator.pushNamed(context, CreateNewNotePage.id, arguments: colors);
                     },
                     child: const Icon(Icons.add)))
           ],

@@ -23,7 +23,7 @@ class NotesApp extends StatelessWidget {
       ),
       routes: {
         HomePage.id: (context) => HomePage(),
-        CreateNewNotePage.id: (context) => const CreateNewNotePage(),
+        CreateNewNotePage.id: (context) => CreateNewNotePage(),
       },
       initialRoute: HomePage.id,
     );

@@ -23,6 +23,22 @@ class CreateNewNotePage extends StatelessWidget {
             keyboardType: TextInputType.multiline,
             onchanged: (value) {},
           ),
+          const SizedBox(height: 50),
+          Container(
+              width: double.infinity,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.greenAccent,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Center(
+                  child: Text(
+                'Save Note',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24),
+              )))
         ]),
       ),
     );
