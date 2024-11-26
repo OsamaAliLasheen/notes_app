@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class NoteContainer extends StatelessWidget {
-  NoteContainer({super.key});
+class CustomNoteContainer extends StatelessWidget {
+  CustomNoteContainer({super.key, required this.color});
   final date = DateFormat("MMM d, y").format(DateTime.now());
+
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class NoteContainer extends StatelessWidget {
         height: 230,
         width: 400,
         decoration: BoxDecoration(
-          color: Colors.amber,
+          color: color,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Padding(
@@ -33,9 +35,8 @@ class NoteContainer extends StatelessWidget {
                     Text(
                       'write your note description here baleez write your note description here baleez write your note description here baleez write your note description here baleez',
                       style: TextStyle(fontSize: 20),
-                      maxLines: 4, 
-                      overflow: TextOverflow
-                          .ellipsis, 
+                      maxLines: 4,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
