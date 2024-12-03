@@ -33,8 +33,8 @@ class CustomNoteContainer extends StatelessWidget {
                           TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 12),
-                     Text(
-                     'note.description',
+                    Text(
+                      'note.description',
                       style: TextStyle(fontSize: 20),
                       maxLines: 4,
                       overflow: TextOverflow.ellipsis,
@@ -54,7 +54,7 @@ class CustomNoteContainer extends StatelessWidget {
                     onPressed: onDelete,
                     icon: const Icon(Icons.delete),
                   ),
-                  const Text('note.date.toString'),
+                  Text(date.toString()),
                 ],
               ),
             ],

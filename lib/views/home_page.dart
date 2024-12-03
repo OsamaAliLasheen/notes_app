@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/widgets/search_button.dart';
-import 'package:notes_app/views/create_new_note_page.dart';
+import 'package:notes_app/widgets/search_icon.dart';
 import 'package:notes_app/widgets/note_container.dart';
 
 class HomePage extends StatefulWidget {
@@ -36,10 +35,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Notes',
-        ),
-        actions: const [CustomSearchButton()],
+        title: const Text('Notes'),
+        actions: const [CustomSearchIcon()],
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -60,10 +57,10 @@ class _HomePageState extends State<HomePage> {
                 backgroundColor: Colors.greenAccent,
                 onPressed: () {
                   addContainer();
-                  Navigator.pushNamed(
+                  /* Navigator.pushNamed(
                     context,
                     CreateNewNotePage.id,
-                  );
+                  ); */
                   setState(() {});
                 },
                 child: const Icon(
