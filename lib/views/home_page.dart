@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/custom%20widgets/search_button.dart';
 import 'package:notes_app/views/create_new_note_page.dart';
-import 'package:notes_app/widgets/note_container.dart';
+import 'package:notes_app/custom%20widgets/note_container.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -39,13 +40,7 @@ class _HomePageState extends State<HomePage> {
           'Notes',
         ),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.search,
-              color: Colors.white,
-            ),
-          )
+          CustomSearchButton()
         ],
       ),
       body: Padding(
@@ -78,3 +73,4 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
