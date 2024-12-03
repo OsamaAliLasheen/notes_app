@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/custom%20widgets/search_button.dart';
+import 'package:notes_app/widgets/search_button.dart';
 import 'package:notes_app/views/create_new_note_page.dart';
-import 'package:notes_app/custom%20widgets/note_container.dart';
+import 'package:notes_app/widgets/note_container.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -39,9 +39,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text(
           'Notes',
         ),
-        actions: [
-          CustomSearchButton()
-        ],
+        actions: const [CustomSearchButton()],
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -51,26 +49,32 @@ class _HomePageState extends State<HomePage> {
               itemCount: colors.length,
               itemBuilder: (context, index) {
                 return CustomNoteContainer(
-
                   color: colors[index],
                   onDelete: () => deleteContainer(index),
                 );
               },
             ),
             Align(
-                alignment: Alignment.bottomRight,
-                child: FloatingActionButton(
-                    backgroundColor: Colors.greenAccent,
-                    onPressed: () {
-                      Navigator.pushNamed(context, CreateNewNotePage.id,
-                          arguments: colors);
-                      setState(() {});
-                    },
-                    child: const Icon(Icons.add)))
+              alignment: Alignment.bottomRight,
+              child: FloatingActionButton(
+                backgroundColor: Colors.greenAccent,
+                onPressed: () {
+                  addContainer();
+                  Navigator.pushNamed(
+                    context,
+                    CreateNewNotePage.id,
+                  );
+                  setState(() {});
+                },
+                child: const Icon(
+                  Icons.add,
+                  color: Colors.black,
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-

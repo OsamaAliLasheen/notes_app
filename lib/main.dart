@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/theme/app_theme.dart';
 import 'package:notes_app/views/create_new_note_page.dart';
 import 'package:notes_app/views/home_page.dart';
 
@@ -13,9 +14,9 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: appTheme(),
       routes: {
-        HomePage.id: (context) => HomePage(),
+        HomePage.id: (context) => const HomePage(),
         CreateNewNotePage.id: (context) => CreateNewNotePage(),
       },
       initialRoute: HomePage.id,

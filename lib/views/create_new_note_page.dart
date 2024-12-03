@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/models/note_model.dart';
-import 'package:notes_app/custom%20widgets/text_field.dart';
+import 'package:notes_app/widgets/text_field.dart';
 
 class CreateNewNotePage extends StatelessWidget {
   CreateNewNotePage({super.key});
