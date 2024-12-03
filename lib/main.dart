@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/screens/create_new_note_page.dart';
-import 'package:notes_app/screens/home_page.dart';
+import 'package:notes_app/views/create_new_note_page.dart';
+import 'package:notes_app/views/home_page.dart';
 
 void main() {
   runApp(const NotesApp());
@@ -13,14 +13,7 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xff3E4143),
-          titleTextStyle: TextStyle(
-              fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
-        ),
-        scaffoldBackgroundColor: const Color(0xff3E4143),
-      ),
+      theme: ThemeData.dark(),
       routes: {
         HomePage.id: (context) => HomePage(),
         CreateNewNotePage.id: (context) => CreateNewNotePage(),

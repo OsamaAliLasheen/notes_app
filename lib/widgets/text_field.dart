@@ -10,8 +10,8 @@ class CustomTextField extends StatelessWidget {
 
   final String labelText;
   Function(String)? onchanged;
-  TextInputType? keyboardType;
-  EdgeInsetsGeometry? contentPadding;
+  final TextInputType? keyboardType;
+  final EdgeInsetsGeometry? contentPadding;
 
   @override
   Widget build(BuildContext context) {

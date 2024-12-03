@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class CustomNoteContainer extends StatelessWidget {
-  CustomNoteContainer({super.key, required this.color});
+  CustomNoteContainer({super.key, required this.color, required this.onDelete});
   final date = DateFormat("MMM d, y").format(DateTime.now());
 
   final Color color;
+  final VoidCallback onDelete;
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +28,13 @@ class CustomNoteContainer extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Flutter Notes',
+                      'note.title',
                       style:
                           TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 12),
-                    Text(
-                      'write your note description here baleez write your note description here baleez write your note description here baleez write your note description here baleez',
+                     Text(
+                     'note.description',
                       style: TextStyle(fontSize: 20),
                       maxLines: 4,
                       overflow: TextOverflow.ellipsis,
@@ -50,10 +51,10 @@ class CustomNoteContainer extends StatelessWidget {
                 children: [
                   IconButton(
                     iconSize: 50,
-                    onPressed: () {},
+                    onPressed: onDelete,
                     icon: const Icon(Icons.delete),
                   ),
-                  Text(date),
+                  const Text('note.date.toString'),
                 ],
               ),
             ],
