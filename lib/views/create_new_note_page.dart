@@ -10,6 +10,9 @@ class CreateNewNotePage extends StatelessWidget {
   final TextEditingController titleController = TextEditingController();
   final TextEditingController descriptionController = TextEditingController();
 
+  String? title;
+  String? description;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,18 +25,18 @@ class CreateNewNotePage extends StatelessWidget {
           CustomTextField(
             labelText: 'Note Title',
             onchanged: (value) {
-              titleController.text = value;
+              title = value;
             },
           ),
           CustomTextField(
             labelText: 'Note Description',
             keyboardType: TextInputType.multiline,
             onchanged: (value) {
-              descriptionController.text = value;
+              description = value;
             },
           ),
           const SizedBox(height: 50),
-          SaveNoteButton(titleController: titleController, descriptionController: descriptionController)
+          SaveNoteButton()
         ]),
       ),
     );

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/views/create_new_note_page.dart';
+import 'package:notes_app/widgets/add_note_bottom_sheet.dart';
+import 'package:notes_app/widgets/save_note_button.dart';
 import 'package:notes_app/widgets/search_icon.dart';
 import 'package:notes_app/widgets/note_container.dart';
+import 'package:notes_app/widgets/text_field.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -56,12 +60,15 @@ class _HomePageState extends State<HomePage> {
               child: FloatingActionButton(
                 backgroundColor: Colors.greenAccent,
                 onPressed: () {
-                  addContainer();
-                  /* Navigator.pushNamed(
-                    context,
-                    CreateNewNotePage.id,
-                  ); */
-                  setState(() {});
+                  showModalBottomSheet(
+                      backgroundColor: Colors.black54,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      context: context,
+                      builder: (context) {
+                        return const AddNoteBottomSheet();
+                      });
                 },
                 child: const Icon(
                   Icons.add,

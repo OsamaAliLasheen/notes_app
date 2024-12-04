@@ -4,25 +4,21 @@ import 'package:notes_app/models/note_model.dart';
 class SaveNoteButton extends StatelessWidget {
   const SaveNoteButton({
     super.key,
-    required this.titleController,
-    required this.descriptionController,
   });
 
-  final TextEditingController titleController;
-  final TextEditingController descriptionController;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if (titleController.text.isNotEmpty &&
-            descriptionController.text.isNotEmpty) {
-          final newNote = NoteModel(
-              title: titleController.text,
-              description: descriptionController.text,
-              date: DateTime.now().toString());
-          Navigator.pop(context, newNote);
-        }
+        // if (title!.isNotEmpty &&
+        //     description!.isNotEmpty) {
+        //   final newNote = NoteModel(
+        //       title: title!,
+        //       description: description!,
+        //       date: DateTime.now().toString());
+        //   Navigator.pop(context, newNote);
+        // }
       },
       child: Container(
           width: double.infinity,
