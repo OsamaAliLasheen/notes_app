@@ -36,7 +36,6 @@ class CreateNewNotePage extends StatelessWidget {
             },
           ),
           const SizedBox(height: 50),
-          SaveNoteButton()
         ]),
       ),
     );

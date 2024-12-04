@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants.dart';
 import 'package:notes_app/views/create_new_note_page.dart';
 import 'package:notes_app/widgets/add_note_bottom_sheet.dart';
 import 'package:notes_app/widgets/save_note_button.dart';
@@ -61,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                 backgroundColor: Colors.greenAccent,
                 onPressed: () {
                   showModalBottomSheet(
-                      backgroundColor: Colors.black54,
+                      backgroundColor: kPrimaryColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),

@@ -22,7 +22,11 @@ class AddNoteBottomSheet extends StatelessWidget {
           onchanged: (value) {},
         ),
         const SizedBox(height: 50),
-        SaveNoteButton()
+        SaveNoteButton(
+          onTap: () {
+            Navigator.pop(context);
+          },
+        )
       ]),
     );
   }
