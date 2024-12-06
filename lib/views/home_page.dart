@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
-import 'package:notes_app/views/create_new_note_page.dart';
 import 'package:notes_app/widgets/add_note_bottom_sheet.dart';
-import 'package:notes_app/widgets/save_note_button.dart';
 import 'package:notes_app/widgets/search_icon.dart';
 import 'package:notes_app/widgets/note_container.dart';
-import 'package:notes_app/widgets/text_field.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

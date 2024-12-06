@@ -4,12 +4,12 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField(
       {super.key,
       required this.labelText,
-      this.onchanged,
+      this.onSubmitted,
       this.keyboardType,
       this.contentPadding});
 
   final String labelText;
-  final Function(String)? onchanged;
+  final Function(String)? onSubmitted;
   final TextInputType? keyboardType;
   final EdgeInsetsGeometry? contentPadding;
 
@@ -20,7 +20,7 @@ class CustomTextField extends StatelessWidget {
       child: TextField(
         style: const TextStyle(color: Colors.greenAccent),
         keyboardType: keyboardType,
-        onChanged: onchanged,
+        onSubmitted: onSubmitted,
         minLines: 1,
         maxLines: 9,
         decoration: InputDecoration(
